@@ -1,0 +1,10 @@
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\DataBaseSQL.exe.config
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\DataBaseSQL.exe
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\DataBaseSQL.pdb
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.csproj.AssemblyReference.cache
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.Properties.Resources.resources
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.csproj.GenerateResource.cache
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.csproj.CoreCompileInputs.cache
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.exe
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.pdb
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.LoginForm.resources
