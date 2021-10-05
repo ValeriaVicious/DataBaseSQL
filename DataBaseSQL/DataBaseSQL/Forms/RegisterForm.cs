@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using MySql.Data.MySqlClient;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -9,6 +11,10 @@ namespace DataBaseSQL
         #region Fields
 
         private Point _lastPoint;
+        private string _nameOfUser;
+        private string _surnameOfUser;
+        private string _loginOfUser;
+        private string _passwordOfUser;
 
         #endregion
 
@@ -120,6 +126,86 @@ namespace DataBaseSQL
             {
                 passwordTextBox.Text = Constants.AddPassword;
                 passwordTextBox.ForeColor = Color.Gray;
+            }
+        }
+
+        private void RegisterButton_Click(object sender, System.EventArgs e)
+        {
+            if (nameTextBox.Text == Constants.AddName)
+            {
+                MessageBox.Show("Вы должны ввести имя пользователя.");
+                return;
+            }
+
+            if (surnameTextBox.Text == Constants.AddSurname)
+            {
+                MessageBox.Show("Вы должны ввести фамилию пользователя.");
+                return;
+            }
+
+            if (userLoginTextBox.Text == Constants.AddLogin)
+            {
+                MessageBox.Show("Вы должны ввести логин пользователя.");
+                return;
+            }
+
+            if (passwordTextBox.Text == Constants.AddPassword)
+            {
+                MessageBox.Show("Вы должны ввести пароль пользователя.");
+                return;
+            }
+
+            if (IsUserExists())
+            {
+                return;
+            }
+
+            _nameOfUser = nameTextBox.Text;
+            _surnameOfUser = surnameTextBox.Text;
+            _loginOfUser = userLoginTextBox.Text;
+            _passwordOfUser = passwordTextBox.Text;
+
+            DataBase dataBase = new DataBase();
+            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO `users` (`Login`, `Password`, `Name`, `Surname`) VALUES (@userLogin, @userPassword, @userName, @userSurname)", dataBase.GetConnection());
+            mySqlCommand.Parameters.Add("@userLogin", MySqlDbType.VarChar).Value = _loginOfUser;
+            mySqlCommand.Parameters.Add("@userPassword", MySqlDbType.VarChar).Value = _passwordOfUser;
+            mySqlCommand.Parameters.Add("@userName", MySqlDbType.VarChar).Value = _nameOfUser;
+            mySqlCommand.Parameters.Add("@userSurname", MySqlDbType.VarChar).Value = _surnameOfUser;
+
+            dataBase.OpenConnection();
+
+            if (mySqlCommand.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Регистрация прошла успешно.");
+            }
+            else
+            {
+                MessageBox.Show("Аккаунт не был создан.");
+            }
+
+            dataBase.CloseConnection();
+        }
+
+        public bool IsUserExists()
+        {
+            DataBase dataBase = new DataBase();
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `users` WHERE `Login` =  @userLogin", dataBase.GetConnection());
+            command.Parameters.Add("@userLogin", MySqlDbType.VarChar).Value = _loginOfUser;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Такой логин уже существвует.\nВведите другой.");
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

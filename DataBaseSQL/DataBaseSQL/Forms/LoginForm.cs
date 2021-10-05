@@ -61,7 +61,6 @@ namespace DataBaseSQL
             _lastPoint = new Point(e.X, e.Y);
         }
 
-        #endregion
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -124,5 +123,7 @@ namespace DataBaseSQL
                 passwordTextBox.ForeColor = Color.Gray;
             }
         }
+        #endregion
     }
+
 }
