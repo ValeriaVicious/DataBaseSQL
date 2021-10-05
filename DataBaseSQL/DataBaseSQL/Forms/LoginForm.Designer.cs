@@ -35,8 +35,8 @@ namespace DataBaseSQL
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.rememberCheckBox = new System.Windows.Forms.CheckBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.RegisterLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -110,17 +110,6 @@ namespace DataBaseSQL
             this.passwordTextBox.Enter += new System.EventHandler(this.PasswordTextBox_Enter);
             this.passwordTextBox.Leave += new System.EventHandler(this.PasswordTextBox_Leave);
             // 
-            // rememberCheckBox
-            // 
-            this.rememberCheckBox.AutoSize = true;
-            this.rememberCheckBox.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rememberCheckBox.Location = new System.Drawing.Point(33, 284);
-            this.rememberCheckBox.Name = "rememberCheckBox";
-            this.rememberCheckBox.Size = new System.Drawing.Size(178, 27);
-            this.rememberCheckBox.TabIndex = 3;
-            this.rememberCheckBox.Text = "Запомнить меня";
-            this.rememberCheckBox.UseVisualStyleBackColor = true;
-            // 
             // loginButton
             // 
             this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -135,13 +124,26 @@ namespace DataBaseSQL
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
+            // RegisterLabel
+            // 
+            this.RegisterLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegisterLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegisterLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RegisterLabel.Location = new System.Drawing.Point(30, 287);
+            this.RegisterLabel.Name = "RegisterLabel";
+            this.RegisterLabel.Size = new System.Drawing.Size(158, 23);
+            this.RegisterLabel.TabIndex = 3;
+            this.RegisterLabel.Text = "Регистрация";
+            this.RegisterLabel.Click += new System.EventHandler(this.RegisterLabel_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 401);
+            this.Controls.Add(this.RegisterLabel);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.rememberCheckBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.panel1);
@@ -163,8 +165,8 @@ namespace DataBaseSQL
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.CheckBox rememberCheckBox;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label toCloseFormAutorizationLabel;
+        private System.Windows.Forms.Label RegisterLabel;
     }
 }

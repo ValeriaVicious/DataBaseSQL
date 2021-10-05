@@ -23,3 +23,4 @@ C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQ
 C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\MySql.Data.xml
 C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.csproj.CopyComplete
 C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.RegisterForm.resources
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.Forms.MainForm.resources

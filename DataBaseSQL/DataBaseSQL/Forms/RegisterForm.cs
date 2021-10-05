@@ -208,5 +208,12 @@ namespace DataBaseSQL
                 return false;
             }
         }
+
+        private void AutorizationLabel_Click(object sender, System.EventArgs e)
+        {
+            Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
     }
 }

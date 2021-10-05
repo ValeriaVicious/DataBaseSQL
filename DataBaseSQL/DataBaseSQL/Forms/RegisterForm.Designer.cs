@@ -37,6 +37,7 @@ namespace DataBaseSQL
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.userLoginTextBox = new System.Windows.Forms.TextBox();
+            this.AutorizationLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@ namespace DataBaseSQL
             this.RegisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
             this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterButton.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RegisterButton.Location = new System.Drawing.Point(99, 218);
+            this.RegisterButton.Location = new System.Drawing.Point(99, 242);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(136, 40);
             this.RegisterButton.TabIndex = 8;
@@ -132,11 +133,25 @@ namespace DataBaseSQL
             this.userLoginTextBox.Enter += new System.EventHandler(this.UserLoginTextBox_Enter);
             this.userLoginTextBox.Leave += new System.EventHandler(this.UserLoginTextBox_Leave);
             // 
+            // AutorizationLabel
+            // 
+            this.AutorizationLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AutorizationLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AutorizationLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AutorizationLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AutorizationLabel.Location = new System.Drawing.Point(20, 207);
+            this.AutorizationLabel.Name = "AutorizationLabel";
+            this.AutorizationLabel.Size = new System.Drawing.Size(158, 23);
+            this.AutorizationLabel.TabIndex = 11;
+            this.AutorizationLabel.Text = "Авторизация";
+            this.AutorizationLabel.Click += new System.EventHandler(this.AutorizationLabel_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 280);
+            this.ClientSize = new System.Drawing.Size(338, 294);
+            this.Controls.Add(this.AutorizationLabel);
             this.Controls.Add(this.userLoginTextBox);
             this.Controls.Add(this.surnameTextBox);
             this.Controls.Add(this.RegisterButton);
@@ -163,5 +178,6 @@ namespace DataBaseSQL
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox surnameTextBox;
         private System.Windows.Forms.TextBox userLoginTextBox;
+        private System.Windows.Forms.Label AutorizationLabel;
     }
 }
