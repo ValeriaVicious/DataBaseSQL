@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DataBaseSQL.Forms;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Drawing;
@@ -10,6 +11,12 @@ namespace DataBaseSQL
     public partial class LoginForm : Form
     {
         #region Fields
+
+        private RegisterForm _registerForm;
+        private DataBase _dataBase;
+        private DataTable _table;
+        private MySqlDataAdapter _adapter;
+        private MainForm _mainForm;
 
         private Point _lastPoint;
         private string _loginUser;
@@ -23,6 +30,11 @@ namespace DataBaseSQL
         public LoginForm()
         {
             InitializeComponent();
+            _registerForm = new RegisterForm();
+            _dataBase = new DataBase();
+            _table = new DataTable();
+            _adapter = new MySqlDataAdapter();
+            _mainForm = new MainForm();
             loginTextBox.Text = Constants.AddLogin;
             passwordTextBox.Text = Constants.AddPassword;
         }
@@ -34,7 +46,7 @@ namespace DataBaseSQL
 
         private void ToCloseFormAutorizationLabel_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void ToCloseFormAutorizationLabel_MouseEnter(object sender, EventArgs e)
@@ -67,20 +79,17 @@ namespace DataBaseSQL
             _loginUser = loginTextBox.Text;
             _passwordUser = passwordTextBox.Text;
 
-            DataBase dataBase = new DataBase();
-            DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM `users` WHERE `Login` =  @userLogin AND `Password` = @userPassword", dataBase.GetConnection());
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `users` WHERE `Login` =  @userLogin AND `Password` = @userPassword", _dataBase.GetConnection());
             command.Parameters.Add("@userLogin", MySqlDbType.VarChar).Value = _loginUser;
             command.Parameters.Add("@userPassword", MySqlDbType.VarChar).Value = _passwordUser;
 
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
+            _adapter.SelectCommand = command;
+            _adapter.Fill(_table);
 
-            if (table.Rows.Count > 0)
+            if (_table.Rows.Count > 0)
             {
-                MessageBox.Show("Авторизация прошла успешно");
+                Hide();
+                _mainForm.Show();
             }
             else
             {
@@ -124,6 +133,12 @@ namespace DataBaseSQL
             }
         }
         #endregion
+
+        private void RegisterLabel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            _registerForm.Show();
+        }
     }
 
 }
