@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,6 +12,8 @@ namespace DataBaseSQL
         #region Fields
 
         private Point _lastPoint;
+        private string _loginUser;
+        private string _passwordUser;
 
         #endregion
 
@@ -56,5 +60,31 @@ namespace DataBaseSQL
         }
 
         #endregion
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            _loginUser = loginTextBox.Text;
+            _passwordUser = passwordTextBox.Text;
+
+            DataBase dataBase = new DataBase();
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `users` WHERE `Login` =  @userLogin AND `Password` = @userPassword", dataBase.GetConnection());
+            command.Parameters.Add("@userLogin", MySqlDbType.VarChar).Value = _loginUser;
+            command.Parameters.Add("@userPassword", MySqlDbType.VarChar).Value = _passwordUser;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Авторизация прошла успешно");
+            }
+            else
+            {
+                MessageBox.Show("Данные введены неверно");
+            }
+        }
     }
 }

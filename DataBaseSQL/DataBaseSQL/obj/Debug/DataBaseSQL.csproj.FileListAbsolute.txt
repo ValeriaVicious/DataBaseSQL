@@ -8,3 +8,17 @@ C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQ
 C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.exe
 C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.pdb
 C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.LoginForm.resources
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\MySql.Data.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\Google.Protobuf.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\Zstandard.Net.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\System.Memory.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\System.Buffers.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\bin\Debug\MySql.Data.xml
+C:\Users\Лерочка\Documents\PorfolioNET\DataBaseSQL\DataBaseSQL\DataBaseSQL\DataBaseSQL\obj\Debug\DataBaseSQL.csproj.CopyComplete
