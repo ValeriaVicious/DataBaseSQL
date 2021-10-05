@@ -14,6 +14,7 @@
 - все данные хранятся в локальной Базе данных.
 
 Скриншоты:
+
 ![RegisterWindow](https://user-images.githubusercontent.com/59263802/136020817-efecfdcc-99a0-4aab-a190-2972c89432a8.png)
 
 ![AutorizationWindow](https://user-images.githubusercontent.com/59263802/136020828-5844ac55-c162-4b68-a4f3-060a14bd3386.png)
